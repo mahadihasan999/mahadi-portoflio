@@ -1,0 +1,9 @@
+{
+  "name": "Mahadi Hasan Portfolio",
+  "short_name": "Mahadi Hasan",
+  "description": "SEO specialist, web developer, and digital marketing strategist.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#07090d",
+  "theme_color": "#07090d"
+}
