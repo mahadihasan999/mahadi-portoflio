@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply m-0 bg-ink font-sans text-slate-200 antialiased; }
+  ::selection { @apply bg-electric text-white; }
+}
+
+@layer components {
+  .shell { @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12; }
+  .section { @apply py-24 sm:py-32; }
+  .label { @apply mb-4 flex items-center gap-3 text-[10px] font-extrabold uppercase tracking-[.25em] text-cyan; }
+  .label:before { content:""; @apply h-px w-8 bg-cyan; }
+  .section-title { @apply font-display text-4xl font-bold tracking-[-.055em] text-white sm:text-6xl lg:text-7xl; }
+  .glass { @apply border border-white/10 bg-white/[.035] backdrop-blur-xl; }
+  .tag { @apply rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-slate-300; }
+  .btn { @apply inline-flex items-center justify-center gap-3 rounded-full px-6 py-4 text-xs font-extrabold uppercase tracking-[.12em] transition duration-300; }
+  .btn-primary { @apply btn bg-electric text-white shadow-[0_15px_45px_rgba(22,120,255,.3)] hover:-translate-y-1 hover:bg-blue-500; }
+  .btn-ghost { @apply btn border border-white/15 text-white hover:border-cyan hover:text-cyan; }
+}
+
+.grid-bg { background-image: linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px); background-size: 70px 70px; }
+.blue-glow { background: radial-gradient(circle,rgba(22,120,255,.35),transparent 65%); }
+.project-card:hover img { transform: scale(1.06); }
+.project-card:hover .project-arrow { transform: rotate(45deg); background:#1678ff; }
+.timeline:before { content:""; position:absolute; left:7px; top:12px; bottom:12px; width:1px; background:#263244; }
+.animate-float { animation: float 5s ease-in-out infinite; }
+@keyframes float { 50% { transform: translateY(-10px); } }
